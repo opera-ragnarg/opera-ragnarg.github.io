@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My React App</title>
+    <!-- Load Tailwind CSS from CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Apply Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <!-- This is the root element where your React app will be mounted -->
+    <div id="root" class="w-full max-w-md bg-white rounded-lg shadow-xl p-6 md:p-8">
+        <!-- A simple loading message that will be replaced by the React app -->
+        <p class="text-center text-gray-600">Loading your React application...</p>
+    </div>
+
+    <!--
+        This script tag will load your compiled React application.
+        In a typical React project (e.g., created with Vite or Create React App),
+        your TSX files are compiled into a JavaScript bundle (like main.js or index.js)
+        and placed in a 'dist' or 'build' folder.
+        You'll need to adjust the path below to match your build output.
+    -->
+    <script type="module" src="./src/main.tsx"></script>
+    <!--
+        Note: For a real build, this path would typically be something like:
+        <script type="module" src="/assets/index-xxxxxxxx.js"></script> (for Vite)
+        or
+        <script src="/static/js/main.js"></script> (for Create React App)
+        For this example, we're pointing directly to main.tsx for demonstration purposes
+        in a local development setup, but a build step is crucial for GitHub Pages.
+    -->
+</body>
+</html>
