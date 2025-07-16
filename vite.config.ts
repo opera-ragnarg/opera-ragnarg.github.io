@@ -5,11 +5,13 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 import process from 'process'
 
+const REPO_NAME = 'opera-ragnarg.github.io';
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()
 ],
-  base: process.env.NODE_ENV === 'production' ? '/game-maker-prefab-designer/' : '/',
+  base: `/${REPO_NAME}/`,
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
